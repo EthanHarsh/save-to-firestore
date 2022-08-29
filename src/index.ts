@@ -6,7 +6,7 @@ import cors from 'cors';
 import * as crypto from 'crypto';
 import { decrypt } from './utils/decrypt';
 
-const serviceAccount = require('../polity-labs-faab3fa6027a.json');
+const serviceAccount = require('../service-account-json-here');
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
