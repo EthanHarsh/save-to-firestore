@@ -34,5 +34,8 @@ Activate Development container using your prefered IDE.
 ### Using NPM - Development Start
 #### Start for Development - _Nodemon_
 ```
+// Terminal 1
+npm run typeWatch
+//Terminal 2
 npm run devStart
 ```
