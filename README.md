@@ -1,7 +1,7 @@
 # save-to-firestore-temp
 _Typescript express server Containerized for Google Cloud Run._
 
-![Node.js Badge](https://img.shields.io/badge/JavaScript-Node.js-green) ![Vue Badge](https://img.shields.io/badge/Framework-VUE-green)
+![Typescript Badge](https://img.shields.io/badge/Node.js-Typescript-green) ![Firebase Badge](https://img.shields.io/badge/GCP-Firebase-red)
 
 ## Description
 
