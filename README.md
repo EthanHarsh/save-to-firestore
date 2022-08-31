@@ -11,6 +11,7 @@ I built this application to assist a client transition from a traditional monoli
 ### Using Docker
 ```
 sudo docker build . -t save-to-firestore
+```
 
 ### Using NPM - Production Start
 #### Install Dependencies
