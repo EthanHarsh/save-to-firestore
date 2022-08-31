@@ -36,6 +36,7 @@ Activate Development container using your prefered IDE.
 ```
 // Terminal 1
 npm run typeWatch
-//Terminal 2
+
+// Terminal 2
 npm run devStart
 ```
