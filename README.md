@@ -1,4 +1,4 @@
-# save-to-firestore-temp
+# save-to-firestore-public
 _Typescript express server Containerized for Google Cloud Run._
 
 ![Typescript Badge](https://img.shields.io/badge/Node.js-Typescript-green) ![Firebase Badge](https://img.shields.io/badge/GCP-Firebase-red)

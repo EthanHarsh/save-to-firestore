@@ -9,7 +9,7 @@ export default checkKey;
  */
 function checkKey(req, res, next) {
   let key = req.headers.key;
-  key ? key = decrypt(key) : res.status(401).send('Unauthorized Request');
+  key ? key = decrypt(JSON.parse(key)) : res.status(401).send('Unauthorized Request');
   console.log('Checking key');
   key === process.env.API_KEY ? next() : res.status(401).send('Unauthorized Request');
 }

@@ -26,12 +26,15 @@ app.get('/', (req, res) => {
 
 app.post('/', async (req, res) => {
   console.log(`Request receieved.`);
-  const collection = decrypt(req.body.collection);
-  const data = JSON.parse(decrypt(req.body));
+  const bodyObj = JSON.parse(decrypt(req.body));
+  const collection = bodyObj.collection;
+  const data = JSON.parse(bodyObj.data);
+  let docName: string = bodyObj.docName;
   const date = new Date();
-  data.createdAt = date.toString();
-  const docName = crypto.createHash("sha256").update(JSON.stringify(data)).digest('hex');
-  await db.collection(collection)
+  data.stored_at = date.toString();
+  (!docName) && (docName = crypto.createHash("sha256").update(JSON.stringify(data)).digest('hex'));
+  await db
+      .collection(collection)
       .doc(docName)
       .set(data)
       .catch((err) => {
@@ -45,6 +48,6 @@ app.post('/', async (req, res) => {
 const PORT = process.env.PORT || 3333;
 
 app.listen(PORT, () => {
-  console.log(`Email Save API Started.`);
+  console.log(`Firestore Save API Started.`);
   console.log(`Listening on port ${PORT}.`);
 });
